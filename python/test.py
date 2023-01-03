@@ -18,22 +18,27 @@ def monnaie_a_rendre(argent):
     Sortie ------> la somme à rendre
     '''
     monnaies = [500, 200, 100, 50, 20, 10, 5, 2, 1]
+    rendu = []
     while argent > 0:
         for monnaie in monnaies:
             if monnaie <= argent:
                 argent -= monnaie
-                print(f'Il faut rendre {monnaie} euros')
+                rendu.append(monnaie)
                 break
+    return rendu
 '''
-monnaie_a_rendre(1557)
-'''
+joueur = int(input("Combien d'argent à rendre ? :"))
+for i in monnaie_a_rendre(joueur):
+    print(f'il faut rendre {i} euro')
 
+'''
 
 
 # Algorithme du prêt-à-porter
 
 def monnaie_limite(argent):
     monnaies_limite = {200: 1, 100: 3, 50: 1, 20: 1, 10: 1, 2: 5}
+    rendu_limite = []
     while argent > 0:
         for k in monnaies_limite:
             if k <= argent:
@@ -44,7 +49,7 @@ def monnaie_limite(argent):
                     break
         total = sum(monnaies_limite.values())
         if total == 0 and argent > 0:
-            print(f'Plus de monnaie, plus aucune monnaie à rendre, vraiment plus de monnaie, désolé ! Revenez plus jamais !')
+            print('Plus de monnaie, plus aucune monnaie à rendre, vraiment plus de monnaie, désolé ! Revenez plus jamais !')
             break
     
 '''       
@@ -83,14 +88,15 @@ def mornille(noise):
 
 
 
-
+'''
 nb_noises = int(input("Nombre de noises : "))
 nb_mornilles = int(input("Nombre de mornilles : "))
 nb_gallion = int(input("Nombre de gallion : "))
 
-'''
+
 def monnaie_sorcier(noi, mor, gal):
     return
-'''
+
 
 print(f'il faut rendre {gallion(nb_mornilles)[1] + nb_gallion} gallions, rendre {gallion(nb_mornilles)[0] + mornille(nb_noises)[1]} mornilles, et rendre {mornille(nb_noises)[0]} noises')
+'''
