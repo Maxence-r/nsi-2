@@ -94,8 +94,7 @@ nb_mornilles = int(input("Nombre de mornilles : "))
 nb_gallion = int(input("Nombre de gallion : "))
 
 
-def monnaie_sorcier(noi, mor, gal):
-    return
+
 
 
 print(f'il faut rendre {gallion(nb_mornilles)[1] + nb_gallion} gallions, rendre {gallion(nb_mornilles)[0] + mornille(nb_noises)[1]} mornilles, et rendre {mornille(nb_noises)[0]} noises')
